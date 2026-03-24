@@ -30,10 +30,10 @@ header {
   padding: 18px 16px;
   background: transparent;
   border-bottom: none;
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  backdrop-filter: blur(6px);
+  position: static;
+  top: auto;
+  z-index: auto;
+  backdrop-filter: none;
 }
 
 header h1 {
