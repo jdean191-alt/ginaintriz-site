@@ -14,47 +14,101 @@
   </div>
 </header>
 <main>
-  <section class="section highlight">
-    <h2>Commission a Custom Painting</h2>
-    <p>Work directly with Gina to create an original oil or mixed-media painting inspired by your favorite Trizonia views, portraits, or memories.</p>
-  </section>
+  <section class="section" id="commissions">
+    <h1>Commissions</h1>
 
-  <section class="section">
-    <h3>How commissions work</h3>
-    <ul>
-      <li>Choose a subject: landscape, coastal, portrait, still life, or custom concept.</li>
-      <li>Pick size and finish; receive proof sketches before painting.</li>
-      <li>Shipping from Greece worldwide; secure payment options by email.</li>
-    </ul>
+    <h2>Create something just for you</h2>
+    <p>
+        If you’d like a piece of art made especially for your home, your story, or someone you love,
+        I’d be delighted to create a custom artwork inspired by the colours and magic of Trizonia.
+    </p>
+    <p>
+        I work with resin, texture, gold leaf, and mixed media, bringing to life the sea creatures,
+        island scenes, and whimsical characters that define my style. Whether you’re dreaming of an
+        octopus swirling through turquoise waves, a crab full of personality, a window looking out
+        to the Aegean, or something entirely your own, we can bring it to life together.
+    </p>
+
+    <h2>How commissions work</h2>
+
+    <h3>1. Share your idea</h3>
+    <p>
+        Tell me what you have in mind — the subject, colours, mood, or a piece of mine you love.
+        You don’t need to know all the details; we can shape it together.
+    </p>
+
+    <h3>2. Choose your size</h3>
+    <p>
+        I offer a range of canvas sizes, from small keepsakes to large statement pieces.
+        If you’re unsure what size suits your space, I can help you choose.
+    </p>
+
+    <h3>3. I create your artwork</h3>
+    <p>
+        Once we agree on the concept and size, I begin the piece. Resin artworks take time to layer
+        and cure, so please allow for a little patience — the results are worth it.
+    </p>
+
+    <h3>4. Final approval</h3>
+    <p>
+        Before shipping, I’ll send you photos of the finished artwork to make sure you’re completely happy.
+    </p>
+
+    <h3>5. Delivery</h3>
+    <p>
+        Your piece will be carefully packaged and shipped from Trizonia to your door.
+    </p>
+
+    <h2>Pricing</h2>
+    <p>
+        Commission prices vary depending on size, materials, and complexity. Once you share your idea,
+        I’ll provide a clear quote with no surprises.
+    </p>
+
+    <h2>Ready to begin?</h2>
+    <p>
+        If you’d like to start a commission or ask a question, please send me a message through the
+        contact form below. I’d love to create something beautiful for you.
+    </p>
   </section>
 
   <section class="section">
     <h3>Commission Request Form</h3>
     <p>Fill out your project details, and Gina will email a quote and timeline.</p>
     <form action="mailto:j.dean191@gmail.com" method="post" enctype="text/plain" class="section-card">
-      <label for="name">Name</label><br>
-      <input id="name" name="name" type="text" required style="width:100%;padding:8px;margin:5px 0;border-radius:6px;border:1px solid #cbd5e3;">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required>
+      </div>
 
-      <label for="email">Email</label><br>
-      <input id="email" name="email" type="email" required style="width:100%;padding:8px;margin:5px 0;border-radius:6px;border:1px solid #cbd5e3;">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+      </div>
 
-      <label for="subject">Painting type</label><br>
-      <select id="subject" name="subject" style="width:100%;padding:8px;margin:5px 0;border-radius:6px;border:1px solid #cbd5e3;">
-        <option>Coastal / landscape</option>
-        <option>Portrait / figure</option>
-        <option>Still life</option>
-        <option>Abstract / custom</option>
-      </select>
+      <div class="form-group">
+        <label for="subject">Painting type</label>
+        <select id="subject" name="subject">
+          <option>Coastal / landscape</option>
+          <option>Portrait / figure</option>
+          <option>Still life</option>
+          <option>Abstract / custom</option>
+        </select>
+      </div>
 
-      <label for="size">Preferred size</label><br>
-      <input id="size" name="size" type="text" placeholder="e.g. 50x70 cm" style="width:100%;padding:8px;margin:5px 0;border-radius:6px;border:1px solid #cbd5e3;">
+      <div class="form-group">
+        <label for="size">Preferred size</label>
+        <input id="size" name="size" type="text" placeholder="e.g. 50x70 cm">
+      </div>
 
-      <label for="details">Project details</label><br>
-      <textarea id="details" name="details" rows="5" placeholder="Tell me your idea, colors, mood, shipping country..." style="width:100%;padding:8px;margin:5px 0;border-radius:6px;border:1px solid #cbd5e3;"></textarea>
+      <div class="form-group">
+        <label for="details">Project details</label>
+        <textarea id="details" name="details" rows="5" placeholder="Tell me your idea, colors, mood, shipping country..."></textarea>
+      </div>
 
-      <button type="submit" class="btn" style="display:inline-block;margin-top:8px;">Send commission request</button>
+      <button type="submit" class="btn" style="margin-top:8px;">Send commission request</button>
     </form>
-    <small style="color:#5f6773;display:block;margin-top:8px;">Tip: If mailto does not open automatically, email gina@trizoniaart.com directly with your details.</small>
+    <small class="form-help">Tip: If mailto does not open automatically, email gina@trizoniaart.com directly with your details.</small>
   </section>
 </main>
 <footer>&copy; 2026 Gina Kalogeropoulou</footer>

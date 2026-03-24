@@ -199,8 +199,9 @@ main {
   color: #1b3f5f;
   border-bottom: 1px solid #e6ecf4;
   padding-bottom: 6px;
-  text-transform: uppercase;
-  letter-spacing: 0.35px;
+  /* keep original capitalization as written in the HTML */
+  text-transform: none;
+  letter-spacing: 0;
 }
 
 .section p {
@@ -233,6 +234,44 @@ main {
   margin-bottom: 8px;
 }
 
+.section-card form {
+  margin-top: 14px;
+}
+
+.section-card .form-group {
+  margin-bottom: 12px;
+}
+
+.section-card label {
+  display: inline-block;
+  margin-bottom: 4px;
+  color: #334055;
+  font-weight: 600;
+}
+
+.section-card input,
+.section-card select,
+.section-card textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e3;
+  color: #2e3b45;
+  font-size: 0.95rem;
+}
+
+.section-card textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.section-card .form-help {
+  color: #5f6773;
+  margin-top: 8px;
+  font-size: 0.87rem;
+}
+
+.section-card h3,
 .section-card p,
 .section-card li {
   color: #48403b;
