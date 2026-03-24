@@ -21,14 +21,35 @@
 </header>
 <main>
   <section class="hero">
+    <div class="carousel-container">
+      <div class="carousel-slide active">
+        <img src="images/trizonia/gina-triz.jpg" alt="Gina in Trizonia">
+      </div>
+      <div class="carousel-slide">
+        <img src="images/trizonia/gini-art-2.jpg" alt="Gina's art in Trizonia">
+      </div>
+      <div class="carousel-slide">
+        <img src="images/trizonia/gini-art.jpg" alt="Gina's art">
+      </div>
+      <div class="carousel-slide">
+        <img src="images/trizonia/triz-2.jpg" alt="Trizonia landscape">
+      </div>
+      <div class="carousel-slide">
+        <img src="images/trizonia/triz.jpg" alt="Trizonia island">
+      </div>
+      <div class="carousel-dots">
+        <div class="carousel-dot active" data-slide="0"></div>
+        <div class="carousel-dot" data-slide="1"></div>
+        <div class="carousel-dot" data-slide="2"></div>
+        <div class="carousel-dot" data-slide="3"></div>
+        <div class="carousel-dot" data-slide="4"></div>
+      </div>
+    </div>
     <div class="hero-content">
       <h2>Gina in Trizonia</h2>
-      <p>I’m Gina Kalogeropoulou, an artist living and painting on the beautiful island of Trizonia in Greece. This is where I share the colours, creatures, and stories that inspire my work. I’m so happy you’re here.
+      <p>I’m <b>Gina Kalogeropoulou</b>, an artist living and painting on the beautiful island of <b>Trizonia</b> in Greece. This is where I share the colours, creatures, and stories that inspire my work. I’m so happy you’re here.
 </p>
       <a class="btn" href="shop.html">View Shop</a>
-    </div>
-    <div>
-      <img class="hero-image" src="images/boats/sunset.jpg" alt="Beach sunset painting">
     </div>
   </section>
   <section class="section">
@@ -56,5 +77,54 @@
   </section>
 </main>
 <footer>&copy; 2026 Gina Kalogeropoulou</footer>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.carousel-dot');
+    let currentSlide = 0;
+    let slideInterval;
+
+    function showSlide(index) {
+      // Hide all slides
+      slides.forEach(slide => slide.classList.remove('active'));
+      dots.forEach(dot => dot.classList.remove('active'));
+
+      // Show current slide
+      slides[index].classList.add('active');
+      dots[index].classList.add('active');
+      currentSlide = index;
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    function startAutoSlide() {
+      slideInterval = setInterval(nextSlide, 4000); // Change slide every 4 seconds
+    }
+
+    function stopAutoSlide() {
+      clearInterval(slideInterval);
+    }
+
+    // Add click event listeners to dots
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        stopAutoSlide();
+        showSlide(index);
+        startAutoSlide(); // Restart auto-sliding after manual interaction
+      });
+    });
+
+    // Start the carousel
+    startAutoSlide();
+
+    // Pause on hover
+    const carousel = document.querySelector('.carousel-container');
+    carousel.addEventListener('mouseenter', stopAutoSlide);
+    carousel.addEventListener('mouseleave', startAutoSlide);
+  });
+</script>
 </body>
 </html>
