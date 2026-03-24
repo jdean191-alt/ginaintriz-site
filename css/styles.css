@@ -5,23 +5,26 @@
   padding: 0;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 :root {
-  --bg: #f8f3e8;
-  --surface: #fffdf8;
-  --text: #2e3b45;
+  --bg: #f7f2e9; /* Soft Sand - background */
+  --surface: #ffffff; /* White - surface */
+  --text: #0a3d62; /* Deep Sea Blue - deep contrast */
   --muted: #6f6153;
-  --primary: #2a7ea4;
-  --primary-dark: #1e5880;
-  --accent: #efb668;
+  --primary: #2bbecf; /* Turquoise - main accent */
+  --primary-dark: #0a3d62; /* Deep Sea Blue - deep contrast */
+  --accent: #ff6f61; /* Coral - warm highlight */
+  --gold: #d4a857; /* Gold - elegant detail */
   --border: #e8dfd5;
-  --shadow: 0 8px 24px rgba(29, 56, 84, 0.1);
+  --shadow: 0 8px 24px rgba(10, 61, 98, 0.1); /* Updated shadow with Deep Sea Blue */
 }
 
 body {
-  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Poppins', 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  color: var(--text);
-  background: linear-gradient(180deg, #f7f7ef 0%, #dbefff 40%, #f0f7ff 100%);
+  color: #333333; /* Dark grey - body text */
+  background: linear-gradient(180deg, #f7f2e9 0%, #e8f4f8 40%, #f0f9ff 100%);
   min-height: 100vh;
 }
 
@@ -37,14 +40,15 @@ header {
 }
 
 header h1 {
+  font-family: 'Caveat', cursive;
   font-size: clamp(1.4rem, 4vw, 1.7rem);
   letter-spacing: 0.4px;
   margin: 0;
-  color: #1c4c62;
+  color: #0a3d62; /* Deep Sea Blue - headings */
 }
 
 header p {
-  color: #3b5868;
+  color: #333333; /* Dark grey - body text */
   font-size: 0.82rem;
   margin-top: 3px;
   margin-bottom: 0;
@@ -80,6 +84,11 @@ nav {
   gap: 12px;
   flex-wrap: wrap;
   margin-top: 6px;
+  background: rgba(255, 255, 255, 0.9); /* White with slight transparency */
+  backdrop-filter: blur(10px);
+  padding: 8px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(212, 168, 87, 0.2); /* Gold - subtle accent */
 }
 
 .log2-only .brand { display:none; }
@@ -90,7 +99,7 @@ nav {
 
 nav a {
   display: inline-block;
-  color: #3a3a3a;
+  color: #0a3d62; /* Deep Sea Blue - headings */
   text-decoration: none;
   font-weight: 600;
   border: 1px solid transparent;
@@ -101,9 +110,9 @@ nav a {
 
 nav a:hover,
 nav a.active {
-  background: #2a6f8f;
+  background: #ff6f61; /* Coral - highlight text/small accents */
   color: #fff;
-  border-color: #2a6f8f;
+  border-color: #ff6f61; /* Coral - highlight text/small accents */
 }
 
 main {
@@ -121,8 +130,8 @@ main {
 }
 
 .hero {
-  background: linear-gradient(180deg, #fefcf8 0%, #e9f3ff 60%, #f6feff 100%);
-  border: 1px solid rgba(181, 210, 236, 0.45);
+  background: linear-gradient(180deg, #f7f2e9 0%, #e8f4f8 60%, #f0f9ff 100%);
+  border: 1px solid #d4a857; /* Gold - elegant detail */
   border-radius: 16px;
   box-shadow: var(--shadow);
   padding: 24px;
@@ -135,13 +144,14 @@ main {
 }
 
 .hero h2 {
+  font-family: 'Caveat', cursive;
   font-size: clamp(1.5rem, 4vw, 2rem);
-  color: #1e4d66;
+  color: #0a3d62; /* Deep Sea Blue - headings */
   margin-bottom: 10px;
 }
 
 .hero p {
-  color: #3d535f;
+  color: #333333; /* Dark grey - body text */
   font-size: 1rem;
   margin-bottom: 14px;
 }
@@ -193,11 +203,12 @@ main {
   box-shadow: 0 4px 14px rgba(0,0,0,0.04);
 }
 .section h3 {
+  font-family: 'Caveat', cursive;
   margin-top: 0;
   margin-bottom: 10px;
   font-size: 1.2rem;
-  color: #1b3f5f;
-  border-bottom: 1px solid #e6ecf4;
+  color: #0a3d62; /* Deep Sea Blue - headings */
+  border-bottom: 1px solid #d4a857; /* Gold - thin borders, dividers */
   padding-bottom: 6px;
   /* keep original capitalization as written in the HTML */
   text-transform: none;
@@ -207,7 +218,7 @@ main {
 .section p {
   margin-top: 0;
   margin-bottom: 14px;
-  color: #4f5661;
+  color: #333333; /* Dark grey - body text */
 }
 
 .section.highlight {
@@ -229,8 +240,7 @@ main {
 }
 
 .section-card h2,
-.section-card h3 {
-  color: #223344;
+.section-card h3 {  font-family: 'Caveat', cursive;  color: #0a3d62; /* Deep Sea Blue - deep contrast */
   margin-bottom: 8px;
 }
 
@@ -245,7 +255,7 @@ main {
 .section-card label {
   display: inline-block;
   margin-bottom: 4px;
-  color: #334055;
+  color: #0a3d62; /* Deep Sea Blue - headings */
   font-weight: 600;
 }
 
@@ -265,16 +275,16 @@ main {
   resize: vertical;
 }
 
-.section-card .form-help {
-  color: #5f6773;
-  margin-top: 8px;
-  font-size: 0.87rem;
+.accent-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: #ff6f61; /* Coral - highlight text/small accents */
 }
 
 .section-card h3,
 .section-card p,
 .section-card li {
-  color: #48403b;
+  color: #333333; /* Dark grey - body text */
   margin-bottom: 10px;
   font-size: 0.97rem;
 }
@@ -370,8 +380,8 @@ main {
 .btn {
   display: inline-block;
   margin-top: 10px;
-  background: var(--primary);
-  color: white;
+  background: #ff6f61; /* Coral - primary buttons background */
+  color: #ffffff; /* White - primary buttons text */
   text-decoration: none;
   border-radius: 8px;
   padding: 8px 13px;
@@ -380,16 +390,17 @@ main {
   transition: background 0.2s ease;
 }
 
-.btn:hover { background: var(--primary-dark); }
+.btn:hover { background: #0a3d62; } /* Deep Sea Blue - for hover contrast */
 
 footer {
   text-align: center;
   margin: 32px auto 14px;
   width: min(1100px, 94vw);
   padding: 12px 10px;
-  border-top: 1px solid #e3ddd2;
-  color: #4e473f;
+  background: #0a3d62; /* Deep Sea Blue - background */
+  color: #ffffff; /* White - text */
   font-size: 0.9rem;
+  border-top: 1px solid #d4a857; /* Gold - small accents */
 }
 
 /* Carousel styles */
