@@ -28,6 +28,10 @@ body {
   min-height: 100vh;
 }
 
+p {
+  font-family: 'Poppins', 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 header {
   text-align: center;
   padding: 18px 16px;
@@ -59,10 +63,10 @@ header p {
 }
 
 .log2 {
-  width: 160px;
-  height: 160px;
-  opacity: 0.94;
-  filter: saturate(1.02);
+  width: min(320px, 82vw);
+  height: auto;
+  opacity: 1;
+  filter: none;
   border-radius: 0;
   border: none;
   background: transparent;
@@ -332,7 +336,7 @@ main {
 .artwork h3 {
   margin: 0 0 6px;
   font-size: 1.1rem;
-  color: #1e3d53;
+  color: var(--text); /* Deep Sea Blue */
 }
 
 .artwork p {
@@ -397,8 +401,8 @@ footer {
   margin: 32px auto 14px;
   width: min(1100px, 94vw);
   padding: 12px 10px;
-  background: #0a3d62; /* Deep Sea Blue - background */
-  color: #ffffff; /* White - text */
+  background: transparent;
+  color: #0a3d62;
   font-size: 0.9rem;
   border-top: 1px solid #d4a857; /* Gold - small accents */
 }
@@ -462,4 +466,15 @@ footer {
   .artwork img {
     height: 150px;
   }
+}
+
+img {
+    border-radius: 8px;
+}
+
+/* Global text normalization: one font + one color everywhere */
+body,
+body * {
+  font-family: 'Poppins', 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+  color: #0a3d62 !important;
 }
